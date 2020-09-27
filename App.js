@@ -1,30 +1,37 @@
 import React, {Component} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-} from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import Main from './src/pages/main';
+
+import './src/config/StatusBarConfig';
+
+const Stack = createStackNavigator();
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-      </View>
+      <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name="Main" 
+          component={Main} 
+          options={{
+            title: 'Hunt Mobile',
+            headerStyle: {
+              backgroundColor: '#DA552F',
+              justifyContent: 'center',
+              alignItems: 'center',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              textAlign: 'center',
+            },
+          }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-});
