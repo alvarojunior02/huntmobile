@@ -1,2 +1,2 @@
 # huntmobile
-Repositório para o Curso "React Native" da Rocketseat
+Repositório para o Curso "React Native Starter" da Rocketseat
