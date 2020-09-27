@@ -13,22 +13,23 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#DA552F',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textAlign: 'center',
+          },
+        }}
+      >
         <Stack.Screen 
           name="Main" 
           component={Main} 
           options={{
             title: 'Hunt Mobile',
-            headerStyle: {
-              backgroundColor: '#DA552F',
-              justifyContent: 'center',
-              alignItems: 'center',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-              textAlign: 'center',
-            },
           }}/>
       </Stack.Navigator>
     </NavigationContainer>
