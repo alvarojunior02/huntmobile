@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Main from './src/pages/main';
+import Product from './src/pages/product';
 
 import './src/config/StatusBarConfig';
 
@@ -13,24 +14,32 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: '#DA552F',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            textAlign: 'center',
-          },
-        }}
-      >
-        <Stack.Screen 
-          name="Main" 
-          component={Main} 
-          options={{
-            title: 'Hunt Mobile',
-          }}/>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: '#DA552F',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              textAlign: 'center',
+            },
+          }}
+        >
+          <Stack.Screen 
+            name="Main" 
+            component={Main} 
+            options={{
+              title: 'Hunt Mobile',
+            }}
+          />
+          <Stack.Screen 
+            name="Product" 
+            component={Product} 
+            options={{
+              title: 'Hunt Mobile',
+            }}
+          />
       </Stack.Navigator>
     </NavigationContainer>
     );
